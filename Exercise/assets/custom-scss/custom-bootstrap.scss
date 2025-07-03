@@ -1,0 +1,81 @@
+// importazioni di funzioni e variabili bootstrap
+@import '../scss/functions';
+@import '../scss/variables';
+
+
+// ESERCIZIO 1 
+// creazione variabili nuove
+$h7-font-size: $font-size-base * 0.80 !default; 
+$h8-font-size: $font-size-base * 0.60 !default; 
+$h9-font-size: $font-size-base * 0.40 !default; 
+$h10-font-size: $font-size-base * 0.25 !default; 
+
+$new-font-sizes: (
+    7: $h7-font-size,
+    8: $h8-font-size,
+    9: $h9-font-size,
+    10: $h10-font-size,
+) ;
+
+$font-sizes: map-merge($font-sizes, $new-font-sizes);
+
+// ESERCIZIO 2
+$new-border-widths:(
+    6: 6px,
+    7: 7px,
+    8: 8px,
+    9: 9px,
+    10: 10px,
+);
+
+$border-widths: map-merge($border-widths, $new-border-widths);
+
+
+// esercizio 5
+
+$btn-padding-y: 0.75rem;
+$btn-padding-x: 2.5rem;
+
+// esercizio 6
+$grid-gutter-width: 0.5rem; 
+
+// esercizio 7
+$card-bg: $dark;              
+$card-color: $info;            
+$card-border-radius: 2rem; 
+
+// esercizio 8-9-10
+$new-theme-colors:(
+    "danger" : #ff0077,
+    "info" : #00ffea,
+    "light": #f3eeff
+);
+
+$theme-colors: map-merge($theme-colors , $new-theme-colors );
+
+// esercizio 11
+$badge-border-radius: $border-radius-pill; 
+$input-border-radius: $border-radius-pill; 
+$btn-border-radius: $border-radius-pill;   
+
+// eserizio 12. so potevo inserirlo nell'esercizio n8-9-10 ma ho voluto creare una nuova variabile epicode-colors
+$epicode-colors:(
+    "epicode-1": #5726c3,
+    "epicode-2": #8625a5,
+    "epicode-3":#cb2376,
+);
+
+$theme-colors: map-merge($theme-colors, $epicode-colors);
+
+// esercizio 15
+
+$new-container-max-widths: (
+  "3xl": 1520px,
+  "4xl": 1720px
+);
+
+$container-max-widths: map-merge($container-max-widths, $new-container-max-widths);
+
+
+
+@import '../scss/bootstrap.scss'
